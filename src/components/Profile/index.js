@@ -1,4 +1,5 @@
 import React ,{Component} from 'react'
+import { NavLink } from 'react-router-dom';
 import { IoIosArrowDropright } from "react-icons/io";
 import { FaUserAlt } from "react-icons/fa";
 import { FaWallet } from "react-icons/fa";
@@ -63,7 +64,7 @@ class Profile extends Component {
               <span>My Earnings</span>
             </span>
             <div className="maincontent-ic2">
-            <IoIosArrowDropright className="maincontent-arrow-line-down"/>
+            <NavLink to="/myearnings"><IoIosArrowDropright className="maincontent-arrow-line-down"/></NavLink>
             </div>
           </div>
           <div className="maincontent-d04">
