@@ -15,6 +15,7 @@
     border-radius: 9px;
     width: 400px;
     height: 90vh;
+    margin-left:10px;
 }
 .dooper{
     font-size: 16px;
@@ -100,6 +101,7 @@
     justify-content: space-between;
     min-height: 90vh;
     width: 900px;
+    
 }
 .label{
     color: #8D98A4;
