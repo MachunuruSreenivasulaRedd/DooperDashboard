@@ -1,7 +1,9 @@
 import './index.css'
+import {NavLink} from 'react-router-dom'
 import {AiOutlineCaretDown} from 'react-icons/ai'
 import {RiNotification3Line} from 'react-icons/ri'
 import {HiPhone} from 'react-icons/hi'
+import Notifications from '../Notifications'
 
 
 const Header=()=>(
@@ -27,7 +29,7 @@ const Header=()=>(
             </div>
 
             <div className='greyContainer'>
-                <RiNotification3Line/>
+                <NavLink to="/notifications"><RiNotification3Line/></NavLink>
             </div>
             <div className='iconContainer'>
                 <HiPhone/>

@@ -96,10 +96,11 @@ class Dashboard extends Component{
             <div className='uploadInput'>
                 <label className='uploadTxt'>Upload Quotation</label>
                 <div className='quoteInput'>
-                    <div className='uploadLogo'>
-                        <RiUploadCloudLine/>
-                    </div>
-                    <p className='placeHolder'>Place Holder</p>
+                    <button type="button" className='uploadLogo'>
+                    <input type="file" className='fileUploader'/>
+                        <RiUploadCloudLine />
+                        <p className='placeHolder'>Place Holder</p>
+                    </button>
                 </div>
                 <div className='line'>
                     <div className='or'>
@@ -400,6 +401,7 @@ class Dashboard extends Component{
         const availableBtn=availability?"buttonAfter":"buttonBefore"
         const Medicines=selectedSection==="Medicines"?"selected":"section"
         const Vaccination= selectedSection==="Vaccination"?"selected":"section"
+        const Standalone= selectedSection==="standalone"?"selected":"section"
         return(
             <>
              {availability?null: this.renderPopup()}
@@ -423,7 +425,7 @@ class Dashboard extends Component{
                         <div className={Vaccination} onClick={()=>this.onClickSelectSection("Vaccination")}>
                             Vaccination
                         </div>
-                        <div className="" onClick={()=>this.onClickSelectSection("Vaccination")}>
+                        <div className={Standalone} onClick={()=>this.onClickSelectSection("standalone")}>
                             Standalone
                         </div>
                     </div>
