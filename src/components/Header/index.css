@@ -57,7 +57,11 @@
     font-weight: 500;
     margin-left: 10px;
     text-decoration: none;
-    width:100px;
+    min-width:120px;
+}
+.dropProfile:visited{
+    background-color: inherit;
+    color:black;
 }
 .iconContainer{
     background-color: #E40443;

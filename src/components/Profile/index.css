@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    margin-top:-25px;
   }
   .maincontent-maincontent {
     gap: 16px;
@@ -40,6 +41,7 @@
     border-radius: 16px;
     flex-direction: column;
     background-color: var(--dl-color-default-white);
+    margin-top:-25px;
   }
   .backIcon{
     width:30px;
@@ -62,22 +64,22 @@
     flex-shrink: 0;
   }
   .maincontent-ellipse2 {
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
+    border-radius: 40px;
+    object-fit:cover;
   }
   .maincontent-icon {
-    margin-left:-23px;
-    margin-top:10px;
+    margin-left:-28px;
+    margin-top:25px;
     display: flex;
     padding: 6px;
     z-index: 1;
-    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1599999964237213) ;
     align-items: center;
     border:none;
-    border-style: solid;
     border-radius: 80px;
     justify-content: center;
-    background-color: var(--dl-color-green-green1);
+    
   }
   .maincontent-edit {
     width: 12px;
@@ -207,6 +209,11 @@ margin-left:25px;
   .editIcon{
     background-color: green;
     color:white;
+    width:30px;
+    height:28px;
+    border-radius: 40px;
+    margin-top:10px;
+    margin-left:-10px;
   }
   .maincontent-ic {
     gap: 8px;
@@ -219,8 +226,8 @@ margin-left:25px;
     background-color: var(--dl-color-grey-grey10);
   }
   .maincontent-arrow-line-down {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
   }
   .maincontent-d02 {
     gap: 16px;

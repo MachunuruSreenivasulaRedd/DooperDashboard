@@ -43,8 +43,175 @@ class Dashboard extends Component{
         this.setState({QuotationStatus:true})
     }
 
+    renderMedicineSection = () => {
+        const {QuotationStatus,delivered}=this.state
+        const dateClass=delivered?"dateDelivered":"date"
+    return (
+       <div className='middleMainContainer'>
+            <div className='cardsContainer'>
+                <div className='card' onClick={this.onClickChangeSendQuotation}>
+                    <div className='adiv'>
+                        <a className='adivInner'>
+                            <p className='patientId'>#123456</p>
+                            <div className='adivInner'>
+                            <p className={dateClass}><span className='spanIcon'><CiCalendarDate/></span>  13 June, 2023   </p>
+                            <p className={dateClass}><span className='spanIcon'><BiTimeFive/></span>  09:00AM</p>
+                            </div>
+                        </a>
+                        <a className='vaccines'>
+                            <p className='vaccine'>Vaccine 1</p>
+                            <hr className='vaccineHr'/>
+                            <p className='vaccine'>Vaccine 2</p>
+                            <hr className='vaccineHr'/>
+                            <p className='vaccine'>Vaccine 3</p>
+                        </a>
+                    </div>
+                    <hr className='cardHr'/>
+                    <div className='middleCardContainer'>
+                        <div className='profileImgContainer'>
+                            <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
+                            <div>
+                                <a className='patientName'>Patient Name</a><br/>
+                                {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
+                                <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
+                            </div>
+                        </div>
+                        {delivered?<button className='delivered'>Delivered</button>:QuotationStatus?<button className='accepted'>Accepted</button>:<button className='requested'>Quotation Requested</button>}
+                    </div>
+                    <hr className='cardHr'/>
+                    <div className='QuotationBtn'>
+                        {QuotationStatus?<div className='adivInner'><p>Quotation :</p><p>Rs 500</p></div>:<button className='sendQuotation' onClick={this.onClickChangeQuotationStatus}>Send Quotation</button>}
+                    </div>
+                </div>
+            </div>
+            <div className='paginationContainer'>
+                <Pagination/>
+            </div>
+        </div>
+    )}
+
+    renderVaccinationSection=()=> {
+        const {delivered}=this.state
+        const dateClass=delivered?"dateDelivered":"date"
+    return (
+       
+       <div className='vacContainer'>
+        <div className='middleMainContainer'>
+            <div className='cardsContainer'>
+                <div className='card' onClick={this.onClickChangeSendQuotation}>
+                    <div className='adiv'>
+                        <a className='adivInner'>
+                            <p className='patientId'>#123456</p>
+                            <div className='adivInner'>
+                            <p className={dateClass}><span className='spanIcon'><CiCalendarDate/></span>  13 June, 2023   </p>
+                            <p className={dateClass}><span className='spanIcon'><BiTimeFive/></span>  09:00AM</p>
+                            </div>
+                        </a>
+                        <a className='vaccines'>
+                            <p className='vaccine'>Vaccine 1</p>
+                            <hr className='vaccineHr'/>
+                            <p className='vaccine'>Vaccine 2</p>
+                            <hr className='vaccineHr'/>
+                            <p className='vaccine'>Vaccine 3</p>
+                        </a>
+                    </div>
+                    <hr className='cardHr'/>
+                    <div className='middleCardContainer'>
+                        <div className='profileImgContainer'>
+                            <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
+                            <div>
+                                <a className='patientName'>Patient Name</a><br/>
+                                {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
+                                <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
+                            </div>
+                        </div>
+                        <span>Quotation: 500</span>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+
+<div className='middleMainContainer'>
+<div className='cardsContainer'>
+    <div className='card' onClick={this.onClickChangeSendQuotation}>
+        <div className='adiv'>
+            <a className='adivInner'>
+                <p className='patientId'>#123456</p>
+                <div className='adivInner'>
+                <p className={dateClass}><span className='spanIcon'><CiCalendarDate/></span>  13 June, 2023   </p>
+                <p className={dateClass}><span className='spanIcon'><BiTimeFive/></span>  09:00AM</p>
+                </div>
+            </a>
+            <a className='vaccines'>
+                <p className='vaccine'>Vaccine 1</p>
+                <hr className='vaccineHr'/>
+                <p className='vaccine'>Vaccine 2</p>
+                <hr className='vaccineHr'/>
+                <p className='vaccine'>Vaccine 3</p>
+            </a>
+        </div>
+        <hr className='cardHr'/>
+        <div className='middleCardContainer'>
+            <div className='profileImgContainer'>
+                <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
+                <div>
+                    <a className='patientName'>Patient Name</a><br/>
+                    {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
+                    <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
+                </div>
+            </div>
+            <span>Quotation: 500</span>
+        </div>
+        </div>
+        </div>
+        </div>
+
+<div className='middleMainContainer'>
+<div className='cardsContainer'>
+    <div className='card' onClick={this.onClickChangeSendQuotation}>
+        <div className='adiv'>
+            <a className='adivInner'>
+                <p className='patientId'>#123456</p>
+                <div className='adivInner'>
+                <p className={dateClass}><span className='spanIcon'><CiCalendarDate/></span>  13 June, 2023   </p>
+                <p className={dateClass}><span className='spanIcon'><BiTimeFive/></span>  09:00AM</p>
+                </div>
+            </a>
+            <a className='vaccines'>
+                <p className='vaccine'>Vaccine 1</p>
+                <hr className='vaccineHr'/>
+                <p className='vaccine'>Vaccine 2</p>
+                <hr className='vaccineHr'/>
+                <p className='vaccine'>Vaccine 3</p>
+            </a>
+        </div>
+        <hr className='cardHr'/>
+        <div className='middleCardContainer'>
+            <div className='profileImgContainer'>
+                <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
+                <div>
+                    <a className='patientName'>Patient Name</a><br/>
+                    {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
+                    <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
+                </div>
+            </div>
+            <span>Quotation: 500</span>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+    )}
+
+    renderStandaloneSection = () => {
+            return(
+                <div className='noBookings'>
+                <img src="https://res.cloudinary.com/dfx93rmno/image/upload/v1702579192/Frame_1000004060_pqxwxi.png" alt="imgno" className='noBookImg'/>
+            </div>
+            )
+    }
     onClickSelectSection=(section)=>{
-        this.setState({selectedSection:section})
+        this.setState({selectedSection:section},this.renderSections)
     }
     
     onClickChangeSendQuotation=()=>{
@@ -61,6 +228,20 @@ class Dashboard extends Component{
             </div>
         </div>
     )
+
+    renderSections = () => {
+        const {selectedSection} = this.state
+        switch(selectedSection){
+            case "Vaccination":
+                return this.renderVaccinationSection();
+            case "Medicines":
+                return this.renderMedicineSection();
+            case "Standalone":
+                return this.renderStandaloneSection();
+            default:
+                return null;
+        }
+    }
 
     onClickChangePrescription=()=>{
         this.setState(prevState=>({
@@ -96,11 +277,10 @@ class Dashboard extends Component{
             <div className='uploadInput'>
                 <label className='uploadTxt'>Upload Quotation</label>
                 <div className='quoteInput'>
-                    <button type="button" className='uploadLogo'>
-                    <input type="file" className='fileUploader'/>
-                        <RiUploadCloudLine />
+                    <span className='upload'><input type="file" className='fileUploader'/>
+                        <RiUploadCloudLine className='uploadIcon'/>
+                        </span>
                         <p className='placeHolder'>Place Holder</p>
-                    </button>
                 </div>
                 <div className='line'>
                     <div className='or'>
@@ -401,7 +581,7 @@ class Dashboard extends Component{
         const availableBtn=availability?"buttonAfter":"buttonBefore"
         const Medicines=selectedSection==="Medicines"?"selected":"section"
         const Vaccination= selectedSection==="Vaccination"?"selected":"section"
-        const Standalone= selectedSection==="standalone"?"selected":"section"
+        const Standalone= selectedSection==="Standalone"?"selected":"section"
         return(
             <>
              {availability?null: this.renderPopup()}
@@ -425,20 +605,19 @@ class Dashboard extends Component{
                         <div className={Vaccination} onClick={()=>this.onClickSelectSection("Vaccination")}>
                             Vaccination
                         </div>
-                        <div className={Standalone} onClick={()=>this.onClickSelectSection("standalone")}>
+                        <div className={Standalone} onClick={()=>this.onClickSelectSection("Standalone")}>
                             Standalone
                         </div>
                     </div>
                 </div>
-
                 <div className='middleContainer'>
-                    {sendQuotation?this.renderAddQuotation():selectedSection==="Medicines"?this.renderMedicinesContainer():this.renderVaccineContainer()}
+                    {sendQuotation?this.renderAddQuotation():this.renderSections()}
                 </div>
-
+                
                 <div className='footer'>
                     <div className='main'>
                     <div className='itemsContainer'>
-                        <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695106832/Dooper_Logo_1500x1500_4_1_c8cicw.png" className='dooperWhite' alt="footer dooper"/>
+                        <img src="https://res.cloudinary.com/dfx93rmno/image/upload/v1702576617/dooperWhite_ib2lb0.png" className='dooperWhite' alt="footer dooper"/>
                         <div className='icon-text'>
                             <div className='whiteContainer'>
                                 <FiPhone/>

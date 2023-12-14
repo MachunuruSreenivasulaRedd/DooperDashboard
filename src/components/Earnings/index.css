@@ -84,6 +84,50 @@ line-height: 116%; /* 16.24px */
     justify-content: flex-start;
     font-size: 28px;
   }
+  .popupContainer{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    height: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.sortSection{
+    margin-left:auto;
+    color:#E40443;
+}
+.withHigh{
+     color:#E40443;
+}
+.doneBtn{
+    background-color: #E40443;
+    border-radius: 8px;
+    padding:15px;
+    color:white;
+    width:100px;
+    font-weight:500;
+
+}
+.witBtn{
+    width:250px;
+    padding:10px;
+    color:white;
+    background-color:#E40443;
+    border-radius:8px;
+}
+.container{
+    width:350px;
+    height: 150px;
+    padding: 20px 30px 20px 30px;
+    border-radius: 10px;
+    gap: 49px;
+    background-color: #FFFFFF;
+}
   .Header{
     display: flex;
     flex-direction: column;

@@ -8,10 +8,24 @@ import { TiTickOutline } from "react-icons/ti";
 import { IoEllipsisVerticalOutline } from "react-icons/io5";
 
 class Earnings extends Component {
-    state={selectedSection:"History"}
+    state={selectedSection:"History",showWithdrawalPopup:false}
    
     onClickSelectSection = section => {
         this.setState({selectedSection: section})
+    }
+    
+    renderWithdrawalPopup = () => {
+        return(
+            <div className='popupContainer'>
+                <div className='container'>
+                    <h3>Your <span className='withHigh'>withdrawal</span> request has been submitted</h3>
+                    <button type="button" className="doneBtn" onClick={(()=>this.setState({showWithdrawalPopup:false}))}>Done</button>
+                </div>
+            </div>
+        )
+    }
+    withDraw = () => {
+        this.setState({showWithdrawalPopup: true},this.renderWithdrawalPopup)
     }
     
     renderHistory = () => {
@@ -254,6 +268,14 @@ class Earnings extends Component {
             }
     }
 
+    renderAmountToWithdraw = () => {
+        return(
+            <div className='amountWithdrawal'>
+                <input type="integer" placeholder="Amount" />
+                <button onClick={()=>this.withDraw()} type="button" className='witBtn'>Withdraw Money</button>
+            </div>
+        )
+    }
     renderEarningsHeader = () => {
         const {selectedSection} = this.state
         return(
@@ -295,16 +317,20 @@ class Earnings extends Component {
                             </span>
                         </div>
                     </div>
-                </div></div>
+                </div>
+                {selectedSection==="Withdrawal"&& this.renderAmountToWithdraw()}
+                
+                </div>
         )
     }
     render(){
-        const {selectedSection} = this.state
+        const {selectedSection,showWithdrawalPopup} = this.state
         const history=selectedSection==="History"?"selected":"section"
         const withdrawal=selectedSection==="Withdrawal"?"selected":"section"
 
         return(
             <>
+            {showWithdrawalPopup===true&& this.renderWithdrawalPopup()}
             <Header />
             <div className='earnings'>
          {this.renderEarningsHeader()}
@@ -314,6 +340,23 @@ class Earnings extends Component {
                         </div>
                         <div className={withdrawal} onClick={()=>this.onClickSelectSection("Withdrawal")}>
                             Withdrawal
+                        </div>
+                        <div className='sortSection'>
+                            <span>Sort By </span>
+                            <select>
+                                <option value={1}>1</option>
+                                <option value={2}>2</option>
+                                <option value={3}>3</option>
+                                <option value={4}>4</option>
+                                <option value={5}>5</option>
+                                <option value={6}>6</option>
+                                <option value={7}>7</option>
+                                <option value={8}>8</option>
+                                <option value={9}>9</option>
+                                <option value={10}>10</option>
+
+                            </select>
+                            <span>of 10</span>
                         </div>
                     </div>
                     {this.renderSections()}
