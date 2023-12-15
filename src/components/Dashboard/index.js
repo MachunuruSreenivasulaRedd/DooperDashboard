@@ -279,7 +279,7 @@ class Dashboard extends Component{
             <h1 className='addQuoteTxt'>Add Quotation</h1>
             <div className='uploadInput'>
                 <label className='uploadTxt'>Upload Quotation</label>
-                <div className='quoteInput'>
+                <div className='quote'>
                     <span className='upload'><input type="file" className='fileUploader'/>
                         <RiUploadCloudLine className='uploadIcon'/>
                         </span>
