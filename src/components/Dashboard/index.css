@@ -536,6 +536,7 @@
 .upload{
     display: flex;
     justify-content: flex-start;
+    border: none;
 }
 .uploadTxt{
     color: #8D98A4;
@@ -704,9 +705,11 @@
      }
 .fileUploader{
     color: transparent;
-    width: 100%;
-    border:none;
+    width: 200px;
+    border:0px solid white;
     cursor:pointer;
+    margin-left:-20px;
+    align-self:flex-start
 }
 .textInput{
    min-width:400px;
