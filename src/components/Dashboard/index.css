@@ -519,7 +519,6 @@
 .quoteInput{
     width: 92%;
     padding: 10px;
-    border: 1px solid #DCFAEB;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
