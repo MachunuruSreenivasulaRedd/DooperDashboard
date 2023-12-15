@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import OTPInput, { ResendOTP } from "otp-input-react";
 import PhoneNumberValidation from '../PhoneNumberValidation'
 import OTPValidation from '../OTPValidation';
@@ -40,7 +40,7 @@ const LoginForm=()=>{
                 <div className=''>
                     <div className='checkBoxContainer'>
                         <input type='checkbox' className='checkBox'/>
-                        <p>By signing up you agree to <span className='span_dooper'>Terms of use</span></p>
+                        <p className='agree'>By signing up you agree to <span className='span_dooper'>Terms of use</span></p>
                     </div>
                     <div className='checkBoxContainer'>
                         <input type='checkbox' className='checkBox'/>
@@ -90,12 +90,12 @@ const LoginForm=()=>{
                 <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695027900/Group_tubb6n.png" alt="successful img"/>
                 <a className='successful'>Successful</a>
                 <a className='successfulPara'>OPT Is verified successfully, Start your work as pharmacy</a>
-                <button className='successBtn' onClick={onClickContinue}>Continue</button>
+                <button className='successBtn' onClick={onClickContinue}><NavLink className="contLink" to="/dashboard">Continue</NavLink></button>
             </div>
         </div>
     )
 
-    /*const renderReview=()=>(
+    const renderReview=()=>(
         <div className='reviewContainer'>
             <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1694708937/Dooper_Logo.png" alt="dooper img" className='dooperImg'/>
             <div className='reviewImgContainer'>
@@ -104,7 +104,7 @@ const LoginForm=()=>{
                 <a className='reviewPara'>You profile is under review, which will be shown if the sign-up is completed.</a>
             </div>
         </div>
-    )*/
+    )
 
 
 
@@ -116,8 +116,8 @@ const LoginForm=()=>{
                return renderVerify()
             case  "SUCCESS":
                 return renderSuccess()
-            /*case "REVIEW":
-                return renderReview()*/
+            case "REVIEW":
+                return renderReview()
             default:
                 return null;
         }

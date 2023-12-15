@@ -8,7 +8,7 @@
     margin-bottom: 0.1px;
 }
 .a{
-    font-size: 16px;
+    font-size: 13px;
     color: #8D98A4;
     font-weight: 400;
     margin-right: 24px;
@@ -16,6 +16,7 @@
 .header-items{
     display: flex;
     align-items: center;
+    justify-self:center;
 }
 .a2{
     font-size: 16px;

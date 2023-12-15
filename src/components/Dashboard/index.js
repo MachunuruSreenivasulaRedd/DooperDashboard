@@ -125,8 +125,9 @@ class Dashboard extends Component{
                                 <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
                             </div>
                         </div>
-                        <span>Quotation: 500</span>
                     </div>
+                    <hr className='cardHr'/>
+                        <span className='quo'>Quotation: <span>     </span>500</span>
                     </div>
                     </div>
                     </div>
@@ -160,8 +161,9 @@ class Dashboard extends Component{
                     <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
                 </div>
             </div>
-            <span>Quotation: 500</span>
         </div>
+        <hr className='cardHr'/>
+            <span className='quo'>Quotation: <span></span>500</span>
         </div>
         </div>
         </div>
@@ -195,8 +197,9 @@ class Dashboard extends Component{
                     <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
                 </div>
             </div>
-            <span>Quotation: 500</span>
         </div>
+        <hr className='cardHr'/>
+            <span className='quo'>Quotation: <span></span>500</span>
         </div>
         </div>
         </div>
@@ -456,7 +459,7 @@ class Dashboard extends Component{
                     <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695027900/Group_tubb6n.png" alt="successful img" className='quoteSuccessImg'/>
                     <a className='successful success'>Successful</a>
                     <a className='quoteSuccessPara'>OTP is verified successfully</a>
-                    <button className='successBtn quoteSuccessBtn'>Give Feedback</button>
+                    <button className='successBtn quoteSuccessBtn' onClick={this.onClickLater}>Give Feedback</button>
                     <a onClick={this.onClickLater} className='later'>Later</a>
                 </div>
         </div>
@@ -576,22 +579,15 @@ class Dashboard extends Component{
     )
     }
 
-    render(){
+    renderDashboardSections = () => {
         const {availability,selectedSection,sendQuotation,prescription,addQuote,deliveryPop}=this.state 
         const availableBtn=availability?"buttonAfter":"buttonBefore"
         const Medicines=selectedSection==="Medicines"?"selected":"section"
         const Vaccination= selectedSection==="Vaccination"?"selected":"section"
         const Standalone= selectedSection==="Standalone"?"selected":"section"
         return(
-            <>
-             {availability?null: this.renderPopup()}
-             {prescription?this.renderPrescription():null}
-             {addQuote?this.renderAddQuotationPopUp():null}
-             {deliveryPop?this.renderStartDeliveryPopup():null}
-            <Header/>
-            <div className='dashboardContainer'>
-                <div>
-                    <div className='top'>
+            <div>
+            <div className='top'>
                         <h2 className='dashboard '>Dashboard</h2>
                         <div className='availabilityBtn'>
                             <p className='availability'>Availability</p>
@@ -609,7 +605,23 @@ class Dashboard extends Component{
                             Standalone
                         </div>
                     </div>
-                </div>
+                    </div>
+        )
+    }
+
+    render(){
+        const {availability,selectedSection,sendQuotation,prescription,addQuote,deliveryPop}=this.state 
+        
+        return(
+            <>
+             {availability?null: this.renderPopup()}
+             {prescription?this.renderPrescription():null}
+             {addQuote?this.renderAddQuotationPopUp():null}
+             {deliveryPop?this.renderStartDeliveryPopup():null}
+             
+            <Header/>
+            <div className='dashboardContainer'>
+                    {!sendQuotation&&this.renderDashboardSections()}
                 <div className='middleContainer'>
                     {sendQuotation?this.renderAddQuotation():this.renderSections()}
                 </div>

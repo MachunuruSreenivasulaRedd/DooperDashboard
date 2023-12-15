@@ -8,18 +8,18 @@ import Notifications from '../Notifications'
 
 const Header=()=>(
     <div className="headerContainer">
-        <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1694708937/Dooper_Logo.png" alt="header img"/>
+        <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1694708937/Dooper_Logo.png" alt="header" className="logo" />
         <div className="header-items">
             <a className="a">Dooper At Home</a>
             <a className="a">Lab Tests</a>
             <div className='header-items'>
-                <a className="a2">Our Network</a>
+                <a className="a">Our Network</a>
                 <a className='dropdown'><AiOutlineCaretDown/></a>
             </div>
             <a className="a">About Us</a>
             <a className="a">Contact Us</a>
             <div className='header-items'>
-                <a className="a2">Join Us</a>
+                <a className="a">Join Us</a>
                 <a className='dropdown'><AiOutlineCaretDown/></a>
             </div>
             <div className='greyContainer'>
