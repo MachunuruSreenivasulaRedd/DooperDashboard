@@ -80,7 +80,7 @@ class Earnings extends Component {
             </div>
             <div className="content-tt">
               <span className="content-text04 ExtraSmallMedium">
-                <span>RS 500</span>
+                <span className='price1'>RS 500</span>
               </span>
             </div>
           </div>
@@ -95,7 +95,7 @@ class Earnings extends Component {
             </div>
             <div className="content-tt01">
               <span className="content-text10 ExtraSmallMedium">
-                <span>RS 500</span>
+                <span className='price1'>RS 500</span>
               </span>
             </div>
           </div>
@@ -110,7 +110,7 @@ class Earnings extends Component {
             </div>
             <div className="content-tt02">
               <span className="content-text16 ExtraSmallMedium">
-                <span>RS 500</span>
+                <span className='price1'>RS 500</span>
               </span>
             </div>
           </div>
@@ -125,7 +125,7 @@ class Earnings extends Component {
             </div>
             <div className="content-tt03">
               <span className="content-text22 ExtraSmallMedium">
-                <span>RS 500</span>
+                <span className='price1'>RS 500</span>
               </span>
             </div>
           </div>
@@ -140,7 +140,7 @@ class Earnings extends Component {
             </div>
             <div className="content-tt04">
               <span className="content-text28 ExtraSmallMedium">
-                <span>RS 500</span>
+                <span className='price1'>RS 500</span>
               </span>
             </div>
           </div>
@@ -164,7 +164,7 @@ class Earnings extends Component {
               </div>
               <div className="content-tt05">
                 <span className="content-text45 ExtraSmallMedium">
-                  <span>Pending</span>
+                  <span className='price1'>Pending</span>
                 </span>
               </div>
             </div>
@@ -343,6 +343,7 @@ class Earnings extends Component {
                         </div>
                         <div className='sortSection'>
                             <span>Sort By </span>
+                            <span className='pageNo'>Page</span>
                             <select>
                                 <option value={1}>1</option>
                                 <option value={2}>2</option>
@@ -356,7 +357,7 @@ class Earnings extends Component {
                                 <option value={10}>10</option>
 
                             </select>
-                            <span>of 10</span>
+                            <span className='pageNo'>of 10</span>
                         </div>
                     </div>
                     {this.renderSections()}

@@ -160,8 +160,8 @@ class Profile extends Component {
       </div>
       <div className='item'>
       <label htmlFor='PharAddress'>Pharmacy Address</label>
-        <input type="text" id="PharAddress" />
-        <input type="text" id="PharAddress" />
+        <input type="text" id="PharAddress" className='address'/>
+        <input type="text" id="PharAddress" className='address'/>
         <input type="text" id="PharAddress" />
       </div>
       <button type="submit" className='submitBtn' onClick={()=>this.onBasicDetailsSubmit()}>Save Details</button>
@@ -179,8 +179,8 @@ class Profile extends Component {
       </div>
       <div className='item'>
       <label htmlFor='HosAddress'>Hospital Address</label>
-        <input type="text" id="HosAddress" />
-        <input type="text" id="HosAddress" />
+        <input type="text" id="HosAddress" className='address' />
+        <input type="text" id="HosAddress" className='address'/>
         <input type="text" id="HosAddress" />
       </div>
       </form>
@@ -279,7 +279,7 @@ class Profile extends Component {
       <h1>Edit Profile</h1>
       </div>
       <div className='sections'>
-                        <div className={basicDetails} onClick={()=>this.onClickSelectSection("BasicDetails")}>
+                        <div className={`${basicDetails} sectionItem`} onClick={()=>this.onClickSelectSection("BasicDetails")}>
                             Basic Details
                         </div>
                         <div className={myAssociation} onClick={()=>this.onClickSelectSection("MyAssociation")}>

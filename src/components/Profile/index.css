@@ -47,12 +47,16 @@
     width:30px;
     height:30px;
   }
+  .editHeader{
+    padding:30px;
+  }
   .editNameIcon{
     position:absolute;
-    width:30px;
-    height:30px;
+    width:24px;
+    height:24px;
     padding:10px;
     margin-left:-50px;
+    color:#4B465C;
   }
   .maincontent-d {
     gap: 16px;
@@ -103,7 +107,7 @@
     flex-shrink: 0;
   }
   .maincontent-ic{
-    margin-left:-24px;
+    margin-left:-32px;
   }
   .item{
     display: flex;
@@ -125,11 +129,14 @@
   }
   .formContainer{
     margin:25px;
-    margin-left:35px;
+    margin-left:90px;
+  }
+  .sectionItem{
+    margin-left: -35px;
   }
   .section{
     margin-right: 15px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: #adb1b4;
     display: flex;
@@ -148,25 +155,31 @@
 height: 44px;
 padding: 0px, 24px, 0px, 24px;
 border-radius: 8px;
+font-size:16px;
+font-family: Montserrat;
 gap: 12px;
 background-color:#41B079;
 color:white;
 margin-left:25px;
+font-weight:600;
 }
   .sections{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     height: 25px;
-    margin: 0px 60px 0px  60px;
+    margin-left:-50px;
     width: 91%;
     border: 1px solid #E1E5E8;
     border-width: 0px 0px 1px 0px;
     
 }
+.address{
+  margin:0px 0px 5px 0px;
+}
   .selected{
     margin-right: 15px;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 500;
     color: #1A1C1F;
     display: flex;
@@ -178,11 +191,13 @@ margin-left:25px;
     border-width: 0px 0px 1px 0px;
     cursor: pointer;
     padding: 0px 10px 5.5px 10px;
+    font-weight: 500;
 }
 .fileUploader{
   color:transparent;
   cursor:pointer;
   width:420px;
+  border:2px solid #EEF0F3;
 }
   .profileHeading{
     font-size: 28px;
