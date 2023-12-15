@@ -150,7 +150,7 @@ class Profile extends Component {
       </div>
       <div className='item'>
       <label htmlFor='photo'>Pharmacy photo</label>
-        <span><input type="file" id="photo" className='fileUploader'/>
+        <span><input type="file" id="photo" className='input'/>
         <TbEdit className='editNameIcon'/>
         </span>
       </div>
@@ -204,7 +204,7 @@ class Profile extends Component {
     </div>
     <div className='item'>
     <label htmlFor='BnkStmt'>upload bank statement/cancel cheque</label>
-      <span><input type="file" id="BnkStmt" className='fileUploader'/>
+      <span><input type="file" id="BnkStmt" className='input'/>
       <TbEdit className='editNameIcon'/>
       </span>
     </div>
@@ -217,27 +217,27 @@ class Profile extends Component {
       <form className='formContainer'>
       <div className='item'>
       <label htmlFor='photo'>Pharmacy photo</label>
-        <span><input type="file" id="photo" className='fileUploader'/>
+        <span><input type="file" id="photo" className='input'/>
         <TbEdit className='editNameIcon'/>
       </span>
       </div>
       <div className='item'>
       <label htmlFor='photo'>Pharmacy photo</label>
-        <span><input type="file" id="photo" className='fileUploader'/>
-        <TbEdit className='editNameIcon'/>
-      </span>
-      </div>
-
-      <div className='item'>
-      <label htmlFor='photo'>Pharmacy photo</label>
-        <span><input type="file" id="photo" className='fileUploader'/>
+        <span><input type="file" id="photo" className='input'/>
         <TbEdit className='editNameIcon'/>
       </span>
       </div>
 
       <div className='item'>
       <label htmlFor='photo'>Pharmacy photo</label>
-        <span><input type="file" id="photo" className='fileUploader'/>
+        <span><input type="file" id="photo" className='input'/>
+        <TbEdit className='editNameIcon'/>
+      </span>
+      </div>
+
+      <div className='item'>
+      <label htmlFor='photo'>Pharmacy photo</label>
+        <span><input type="file" id="photo" className='input'/>
         </span>
       </div>
       <button type="submit" className='submitBtn' onClick={()=>this.onDocumentsSubmit()}>Save Details</button>
