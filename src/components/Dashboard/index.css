@@ -706,10 +706,11 @@
 .fileUploader{
     color: transparent;
     width: 200px;
+    border: none;
     border:0px solid transparent !important;
     cursor:pointer;
     margin-left:-20px;
-    align-self:flex-start
+    align-self:flex-start;
 }
 .textInput{
    min-width:400px;
