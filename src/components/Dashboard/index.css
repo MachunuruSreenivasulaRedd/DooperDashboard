@@ -21,11 +21,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    height:64px;
     margin: 0px 60px 0px 60px;
+    padding: 24px 0px 8px 0px;
+    box-sizing: border-box;
 }
 .dashboard{
-    font-size: 32px;
+    font-family: Montserrat;
+    font-size: 22px;
+    font-style: normal;
     font-weight: 700;
+    line-height: 32px;
 }
 .availability{
     font-size: 16px;
@@ -218,13 +224,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    height: 25px;
-    margin: 0px 60px 0px  80px;
-    padding-left:50px;
-    margin-left: 80px;
+    height: 90px;
+    margin: 16px 60px 16px  80px;
+    padding-left:40px;
+    margin-left: 50px;
     width: 91%;
     border: 1px solid #E1E5E8;
     border-width: 0px 0px 1px 0px;
+    box-sizing: border-box;
     
 }
 .section{
@@ -271,39 +278,63 @@
 .middleMainContainer{
     display: flex;
     flex-direction: column;
+    margin-left:-25px;
+    width:100%;
     
 }
 .cardsContainer{
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
-    margin: 0px 60px 0px 60px;
+    margin: 0px 10px 0px 60px;
+}
+.adivInner1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    height:112px;
+}
+.adivInner2{
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
 }
 .card{
     display: flex;
     flex-direction:column ;
     border: 1px solid #E4E4E4;
     border-radius: 12px;
-    width: 380px;
-    height: auto;
+    width: 370px;
+    height: 210px;
     padding: 0px;
     margin: 20px 20px 20px 0px;
     background-color: #fff;
 }
 .adiv{
-
-    padding: 5px 16px 5px 16px;
+    display: flex;
+    padding: 14px 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    height:60px;
+    box-sizing: border-box;
+    align-self: stretch;
 }
 .quo{
     display: flex;
     justify-content: space-between;
+    padding-top:20px ;
     padding-left:20px;
     padding-right:20px;
-    padding-bottom: 15px;
+    padding-bottom: 5px;
 }
 .adivInner{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+height:21px;
 }
 .patientId{
     font-size:18px ;
@@ -342,7 +373,8 @@
     display: flex;
     align-items: center;
     width: 60%;
-    margin-top:-10px;
+    height:21px;
+    
 }
 .cardHr{
     width: 100%;
@@ -407,7 +439,8 @@
 }
 .addQuotationContainer{
     margin: 5px 60px 5px 60px;
-    min-height: 400px;
+    min-height: 350px;
+    margin-top: -30px;
 }
 .caseHead{
     font-size: 22px;
@@ -435,6 +468,9 @@
     font-size: 10px;
     font-weight: 500;
     margin-left: 15px;
+}
+.detailsContainer{
+    margin-left: 10px;
 }
 .quoteProfileImg{
     height: 90px;
@@ -692,7 +728,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left:300px;
+    margin-left:-100px;
 }
 
 .delivered{
