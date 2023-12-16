@@ -280,6 +280,7 @@
     flex-direction: column;
     margin-left:-25px;
     width:100%;
+    overflow: hidden;
     
 }
 .cardsContainer{
