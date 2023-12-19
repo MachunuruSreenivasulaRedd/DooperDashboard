@@ -1,11 +1,13 @@
 .headerContainer{
     background-color: #fff;
-    padding: 25px 60px 25px 60px;
+    padding: 25px 60px 40px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 0.7px solid #e6e9eb;
     margin-bottom: 0.1px;
+    height: 125px;
+    box-sizing: border-box;
 }
 .a{
     color: #8D98A4;

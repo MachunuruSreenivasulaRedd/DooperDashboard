@@ -70,7 +70,7 @@ class Dashboard extends Component{
                     <div className='middleCardContainer'>
                         <div className='profileImgContainer'>
                             <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
-                            <div>
+                            <div className='detailsContainer'>
                                 <a className='patientName'>Patient Name</a><br/>
                                 {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
                                 <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
@@ -119,7 +119,7 @@ class Dashboard extends Component{
                     <div className='middleCardContainer'>
                         <div className='profileImgContainer'>
                             <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
-                            <div>
+                            <div className='detailsContainer'>
                                 <a className='patientName'>Patient Name</a><br/>
                                 {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
                                 <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
@@ -129,11 +129,8 @@ class Dashboard extends Component{
                     <hr className='cardHr'/>
                         <span className='quo'>Quotation: <span>     </span>500</span>
                     </div>
-                    </div>
-                    </div>
+                    
 
-<div className='middleMainContainer'>
-<div className='cardsContainer'>
     <div className='card' onClick={this.onClickChangeSendQuotation}>
         <div className='adiv'>
             <a className='adivInner'>
@@ -155,7 +152,7 @@ class Dashboard extends Component{
         <div className='middleCardContainer'>
             <div className='profileImgContainer'>
                 <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
-                <div>
+                <div className='detailsContainer'>
                     <a className='patientName'>Patient Name</a><br/>
                     {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
                     <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
@@ -165,11 +162,40 @@ class Dashboard extends Component{
         <hr className='cardHr'/>
             <span className='quo'>Quotation: <span></span>500</span>
         </div>
+
+        <div className='card' onClick={this.onClickChangeSendQuotation}>
+        <div className='adiv'>
+            <a className='adivInner'>
+                <p className='patientId'>#123456</p>
+                <div className='adivInner'>
+                <p className={dateClass}><span className='spanIcon'><CiCalendarDate/></span>  13 June, 2023   </p>
+                <p className={dateClass}><span className='spanIcon'><BiTimeFive/></span>  09:00AM</p>
+                </div>
+            </a>
+            <a className='vaccines'>
+                <p className='vaccine'>Vaccine 1</p>
+                <hr className='vaccineHr'/>
+                <p className='vaccine'>Vaccine 2</p>
+                <hr className='vaccineHr'/>
+                <p className='vaccine'>Vaccine 3</p>
+            </a>
         </div>
+        <hr className='cardHr'/>
+        <div className='middleCardContainer'>
+            <div className='profileImgContainer'>
+                <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
+                <div className='detailsContainer'>
+                    <a className='patientName'>Patient Name</a><br/>
+                    {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
+                    <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
+                </div>
+            </div>
+        </div>
+        <hr className='cardHr'/>
+            <span className='quo'>Quotation: <span></span>500</span>
         </div>
 
-<div className='middleMainContainer'>
-<div className='cardsContainer'>
+
     <div className='card' onClick={this.onClickChangeSendQuotation}>
         <div className='adiv'>
             <a className='adivInner'>
@@ -191,7 +217,7 @@ class Dashboard extends Component{
         <div className='middleCardContainer'>
             <div className='profileImgContainer'>
                 <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1695474313/Ellipse_2_b3u52q.png" alt="profileImg"/>
-                <div>
+                <div className='detailsContainer'>
                     <a className='patientName'>Patient Name</a><br/>
                     {delivered?<div><a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
                     <a className='details'>Height : 6” 3 inches | Weight : 76</a></div>:<a className='address'>XYZ, streetname, city</a>}
@@ -203,16 +229,19 @@ class Dashboard extends Component{
         </div>
         </div>
         </div>
+        <div className='paginationContainer'>
+                <Pagination/>
+            </div>
         </div>
     )}
 
-    renderStandaloneSection = () => {
-            return(
-                <div className='noBookings'>
-                <img src="https://res.cloudinary.com/dfx93rmno/image/upload/v1702579192/Frame_1000004060_pqxwxi.png" alt="imgno" className='noBookImg'/>
-            </div>
-            )
-    }
+    // renderStandaloneSection = () => {
+    //         return(
+    //             <div className='noBookings'>
+    //             <img src="https://res.cloudinary.com/dfx93rmno/image/upload/v1702579192/Frame_1000004060_pqxwxi.png" alt="imgno" className='noBookImg'/>
+    //         </div>
+    //         )
+    //}
     onClickSelectSection=(section)=>{
         this.setState({selectedSection:section},this.renderSections)
     }
@@ -239,8 +268,8 @@ class Dashboard extends Component{
                 return this.renderVaccinationSection();
             case "Medicines":
                 return this.renderMedicineSection();
-            case "Standalone":
-                return this.renderStandaloneSection();
+            // case "Standalone":
+            //     return this.renderStandaloneSection();
             default:
                 return null;
         }
@@ -501,17 +530,17 @@ class Dashboard extends Component{
             </div>
             <div className='caseDetailsContainer'>
                 <div className='quoteContainer'>
-                    <div className='adivInner'>
+                    <div className='adivInner1'>
                         <div className='profileImgContainer margin'>
                             <img src="https://res.cloudinary.com/dywrzseia/image/upload/v1696333379/Ellipse_2_w3cjwe.png" className='quoteProfileImg' alt="profileImg"/>
-                            <div>
+                            <div className='detailsContainer'>
                                 <a className='patientName'>Patient Name</a><br/>
                                 <a className='address'>XYZ, streetname, city</a><br/>
                                 <a className='details'>Age : 32 | Gender: Male | Blood Group: O+</a><br/>
                                 <a className='details'>Height : 6” 3 inches | Weight : 76</a>
                             </div>
                         </div>
-                        <div className='adivInner'>
+                        <div className='adivInner2'>
                                 <div className='lightPinkContainer'>
                                     <HiPhone/>
                                 </div>
@@ -584,7 +613,6 @@ class Dashboard extends Component{
         const availableBtn=availability?"buttonAfter":"buttonBefore"
         const Medicines=selectedSection==="Medicines"?"selected":"section"
         const Vaccination= selectedSection==="Vaccination"?"selected":"section"
-        const Standalone= selectedSection==="Standalone"?"selected":"section"
         return(
             <div>
             <div className='top'>
@@ -601,15 +629,12 @@ class Dashboard extends Component{
                         <div className={Vaccination} onClick={()=>this.onClickSelectSection("Vaccination")}>
                             Vaccination
                         </div>
-                        <div className={Standalone} onClick={()=>this.onClickSelectSection("Standalone")}>
-                            Standalone
-                        </div>
                     </div>
                     </div>
         )
     }
 
-    render(){
+    render() {
         const {availability,selectedSection,sendQuotation,prescription,addQuote,deliveryPop}=this.state 
         
         return(

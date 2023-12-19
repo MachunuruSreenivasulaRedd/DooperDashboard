@@ -11,7 +11,11 @@ import Home from './components/Home'
 const App = () => 
    (
     <BrowserRouter>
+<<<<<<< HEAD
       <Router>
+=======
+      <Routes>
+>>>>>>> a965cdee5b7dfb6e409c55cd0a57665b520339d9
          <Route exact path="/" element={<Home />}/>
          <Route exact path="/login" element={<LoginForm />}/>
          <Route exact path="/profile" element={<Profile />}/>
