@@ -235,13 +235,13 @@ class Dashboard extends Component{
         </div>
     )}
 
-    // renderStandaloneSection = () => {
-    //         return(
-    //             <div className='noBookings'>
-    //             <img src="https://res.cloudinary.com/dfx93rmno/image/upload/v1702579192/Frame_1000004060_pqxwxi.png" alt="imgno" className='noBookImg'/>
-    //         </div>
-    //         )
-    //}
+    renderStandaloneSection = () => {
+            return(
+                <div className='noBookings'>
+                <img src="https://res.cloudinary.com/dfx93rmno/image/upload/v1702579192/Frame_1000004060_pqxwxi.png" alt="imgno" className='noBookImg'/>
+            </div>
+            )
+    }
     onClickSelectSection=(section)=>{
         this.setState({selectedSection:section},this.renderSections)
     }
@@ -268,8 +268,8 @@ class Dashboard extends Component{
                 return this.renderVaccinationSection();
             case "Medicines":
                 return this.renderMedicineSection();
-            // case "Standalone":
-            //     return this.renderStandaloneSection();
+            case "Standalone":
+                return this.renderStandaloneSection();
             default:
                 return null;
         }
